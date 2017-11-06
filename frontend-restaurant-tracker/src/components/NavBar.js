@@ -19,7 +19,7 @@ const NavBar = (props) => {
         	<Link to='/spots/new'><a>Add New Spot</a></Link>
         </div>
         <div className="navbar-item">
-        	{(localStorage.getItem("jwtToken")) ? <a data-id="logout">Logout</a> : <a>Login</a> }
+        	{(localStorage.getItem("jwtToken")) ? <a data-id="logout">Logout</a> : <Link to='/spots/new'><a>Login</a></Link> }
         </div>
       </div>
     </nav>
