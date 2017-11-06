@@ -6,20 +6,20 @@ const NavBar = (props) => {
 	return(
 		<nav className="navbar" aria-label="main navigation" onClick={props.handleLogout}>
       <div className="navbar-brand">
-        <a className="navbar-item" href="http://localhost:3001/spots">
+        <a className="navbar-item" href="/spots">
           <img src="../marker.png" alt="📍" width="28" height="28"/>
-          <a className="navbar-item spots-title"><strong>Spots</strong></a>
+          <p className="navbar-item spots-title"><strong>Spots</strong></p>
         </a>
       </div>
       <div className="navbar-menu navbar-end">
         <div className="navbar-item">
-        	<Link to='/spots' ><a>My Spots</a></Link>
+        	<Link to='/spots' >My Spots</Link>
         </div>
         <div className="navbar-item">
-        	<Link to='/spots/new'><a>Add New Spot</a></Link>
+        	<Link to='/spots/new'>Add New Spot</Link>
         </div>
         <div className="navbar-item">
-        	{(localStorage.getItem("jwtToken")) ? <a data-id="logout">Logout</a> : <Link to='/spots/new'><a>Login</a></Link> }
+        	{(localStorage.getItem("jwtToken")) ? <a data-id="logout">Logout</a> : <Link to='/spots/new'>Login</Link> }
         </div>
       </div>
     </nav>

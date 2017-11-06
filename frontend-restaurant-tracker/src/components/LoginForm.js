@@ -57,6 +57,7 @@ class LoginForm extends React.Component {
         </form>
         <br/>
           <Link to='/signup'><h3><a id="add-new-spot">Or Sign Up Here</a></h3></Link>
+          <h4>For a demo, use 'demo' for username and password</h4>
         </div>
       )
     }
