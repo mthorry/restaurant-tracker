@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/")
+    fetch("https://my-spots-back.herokuapp.com/")
       .then((res) => res.json())
       .then((json) => {
       })
@@ -36,7 +36,7 @@ class App extends Component {
 
   signup = (signupParams) => {
     const body = JSON.stringify(signupParams)
-    return fetch("http://localhost:3000/signup", {
+    return fetch("https://my-spots-back.herokuapp.com/signup", {
       method: "POST",
       headers: {
         'Accept': 'application/json',
@@ -52,7 +52,7 @@ class App extends Component {
   handleSearch = (searchTerm) => {
     const token = localStorage.getItem("jwtToken")
     const body = JSON.stringify(searchTerm)
-    return fetch("http://localhost:3000/yelp", {
+    return fetch("https://my-spots-back.herokuapp.com/yelp", {
         method: "POST",
         headers: {
         'Accept': 'application/json',

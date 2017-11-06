@@ -1,6 +1,6 @@
 export function loginUser(loginParams) {
   const body = JSON.stringify(loginParams)
-  return fetch("http://localhost:3000/login", {
+  return fetch("https://my-spots-back.herokuapp.com/login", {
     method: 'post',
     body: body,
     headers: {

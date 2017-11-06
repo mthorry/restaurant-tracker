@@ -24,7 +24,7 @@ export default class RestaurantsContainer extends React.Component {
 		const token = localStorage.getItem("jwtToken")
 		const decoded = jwtDecode(token)
 
-		return fetch("http://localhost:3000/users/"+decoded.user_id, {
+		return fetch("https://my-spots-back.herokuapp.com/users/"+decoded.user_id, {
 			headers: {
 				'Accept': 'application/json',
 	      'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ export default class RestaurantsContainer extends React.Component {
       {const id = parseInt(event.target.dataset.id);
             const token = localStorage.getItem("jwtToken")
             const body = JSON.stringify({spot_id: id})
-            return fetch("http://localhost:3000/spots", {
+            return fetch("https://my-spots-back.herokuapp.com/spots", {
               'method': 'delete',
               'headers': {
                 'Accept': 'application/json',
@@ -64,7 +64,7 @@ export default class RestaurantsContainer extends React.Component {
     const token = localStorage.getItem("jwtToken")
     const body = JSON.stringify(spotObject)
 
-    return fetch("http://localhost:3000/spots", {
+    return fetch("https://my-spots-back.herokuapp.com/spots", {
       'method': 'post',
       'headers': {
         'Accept': 'application/json',
@@ -121,7 +121,7 @@ export default class RestaurantsContainer extends React.Component {
 					spots: newSpots,
 					priceSort: "descending"
 				})
-			} 
+			}
   	} else if (event.target.dataset.name === "sort-by-rating") {
 			if (this.state.ratingSort !== "ascending") {
 				let newSpots = spots.sort((prev, next) => {
