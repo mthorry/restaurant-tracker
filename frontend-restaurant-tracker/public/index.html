@@ -9,7 +9,7 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="http://www.iconsdb.com/icons/preview/deep-pink/map-marker-2-xxl.png">
+    <link rel="shortcut icon" href="./marker.png">
     <link href="https://fonts.googleapis.com/css?family=League+Script|Raleway:100i,200i,200,300i,400,400i,500,800" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
@@ -32,15 +32,27 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <footer class="footer" style="margin-top: 25px">
+      <div class="columns">
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4><strong>Spots</strong></h4>
+          <p>
+             was created with ❤️ by <a href="https://www.linkedin.com/in/mthorry/" target="_blank">Matthew Thorry</a> and <a href="https://www.linkedin.com/in/james-miele/" target="_blank">James Miele</a>.
+          </p>
+        </div>
+        </div>
+      <div class="column">
+        <div class="content has-text-centered">
+          <h4><strong>Contact Us</strong></h4>
+          <p><strong><a href="https://github.com/mthorry/restaurant-tracker-demo" target="_blank">GitHub Repo</strong></a> ||
+            <strong><a href="mailto:mthorry@gmail.com?Subject=Nice%20app!" target="_top">Email Matt</strong></a> ||
+            <strong><a href="mailto:jamesmiele@mail.adelphi.edu?Subject=Nice%20app!" target="_top">Email James</strong></a>
+          </p>
+        </div>
+      </div>
+      </div>
+    </footer>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

@@ -93,6 +93,7 @@ h3:hover {
 .App {
   text-align: center;
   color: white;
+  min-height: 600px;
 }
 
 .container {
